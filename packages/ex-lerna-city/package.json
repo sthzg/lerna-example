@@ -1,7 +1,7 @@
 {
   "name": "@sthzg/ex-lerna-city",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": "https://github.com/sthzg/lerna-example.git/tree/master/packages/ex-lerna-city",
   "main": "index.js",
   "dependencies": {
