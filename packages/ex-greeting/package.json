@@ -1,0 +1,9 @@
+{
+  "name": "@sthzg/ex-lerna-greeting",
+  "private": false,
+  "version": "0.0.1",
+  "repository": "https://github.com/sthzg/lerna-example.git/tree/master/packages/ex-lerna-greeting",
+  "dependencies": {
+    "date-fns": "^1.29.0"
+  }
+}

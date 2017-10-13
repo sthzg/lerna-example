@@ -1,0 +1,10 @@
+{
+  "name": "@sthzg/ex-lerna-core",
+  "private": false,
+  "version": "0.0.1",
+  "repository": "https://github.com/sthzg/lerna-example.git/tree/master/packages/ex-lerna-core",
+  "dependencies": {
+    "@sthzg/ex-lerna-city": "^0.0.1",
+    "@sthzg/ex-lerna-greeting": "^0.0.1"
+  }
+}
