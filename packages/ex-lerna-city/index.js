@@ -1,3 +1,3 @@
 module.exports = function() {
-  console.log('locking from city');
+  console.log('locking from city!');
 };
