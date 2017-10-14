@@ -1,3 +1,5 @@
-module.exports = function() {
-  console.log('locking from city!');
+'use strict';
+
+module.exports = function () {
+  console.log('logging from city!'); // eslint-disable-line no-console
 };
