@@ -10,7 +10,8 @@ phases:
       - yarn global add lerna
   pre_build:
     commands:
-      - echo Bootstrap through lerna
+      - echo Bootstrap source code...
+      - yarn
       - lerna bootstrap
   build:
     commands:
@@ -19,3 +20,4 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - ./scripts/release.sh

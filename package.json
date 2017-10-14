@@ -1,5 +1,15 @@
 {
-	"devDependencies": {
-		"lerna": "^2.4.0"
-	}
+  "private": true,
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "lerna": "^2.4.0",
+    "lint-staged": "^4.2.3",
+    "nodegit": "^0.20.2"
+  },
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": ["eslint"]
+  }
 }
