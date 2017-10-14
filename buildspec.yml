@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing global dependencies...
+      - npm install -g yarn
+      - npm install -g lerna
+  pre_build:
+    commands:
+      - echo Bootstrap through lerna
+      - lerna bootstrap
+  build:
+    commands:
+      - echo Build started on `date`
+      - node ./packages/ex-lerna-core/index.js
+  post_build:
+    commands:
+      - echo Build completed on `date`
