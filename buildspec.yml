@@ -3,9 +3,11 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo current node version `node --version`
+      - echo Installing system packages...
       - echo Installing global dependencies...
       - npm install -g yarn
-      - npm install -g lerna
+      - yarn global add lerna
   pre_build:
     commands:
       - echo Bootstrap through lerna
