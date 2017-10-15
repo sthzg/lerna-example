@@ -7,5 +7,6 @@ then
     echo This build is not marked as release
 else
     echo Start publishing as ${semver} release
-    lerna publish --cd-version ${semver} --yes
+    echo Authenticated at npm with user `npm whoami`
+    lerna publish --cd-version ${semver} --yes --loglevel info
 fi

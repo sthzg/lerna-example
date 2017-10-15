@@ -3,14 +3,15 @@ version: 0.2
 phases:
   install:
     commands:
+      - ls -lha
       - echo current node version `node --version`
-      - echo Installing system packages...
-      - echo Installing global dependencies...
+      - echo Installing system packages
+      - echo Installing global dependencies
       - npm install -g yarn
       - yarn global add lerna
   pre_build:
     commands:
-      - echo Bootstrap source code...
+      - echo Bootstrap source code
       - yarn
       - lerna bootstrap
   build:
@@ -20,4 +21,10 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - echo Configure git client
+      - git config --global user.email "$GIT_EMAIL"
+      - git config --global user.name "$GIT_NAME"
+      - echo Check for release
+      - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > ~/.npmrc
+      - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > .npmrc
       - ./scripts/release.sh
